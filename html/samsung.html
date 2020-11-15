@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+    <meta content='width=device-width, height=device-height, initial-scale=1, maximum-scale=1.0, user-scalable=no'
+    name='viewport'>
+	<title>Samsung TV Control</title>
+	<style type='text/css'>
+		body {
+			text-align: center;
+			background-color: black;
+
+		}
+		button {
+			width: 100%;
+			height: 50px;
+			border: none;
+			outline: none;
+			margin-top: 5px;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		button:focus {
+			border: none;
+			outline: none;
+		}
+		.power {
+			background-color: red;
+			color: white;
+		}
+		.number {
+
+			width: 49% !important;
+			height: 20px;
+			font-size: 10px;
+		}
+		.number-full {
+			width: 100% !important;
+			height: 20px;
+			font-size: 10px;
+		}
+		.group1 {
+			width: 49% !important;
+
+		}
+	</style>
+</head>
+<body>
+	<center>
+			<button class='power' hex='0xE0E040BF'>ON/OFF</button>
+			<button class='power' hex='0xE0E0F00F'>Mute</button>
+
+			<button class='group1' hex='0xE0E0E01F'>Volume +</button>
+			<button class='group1' hex='0xE0E0D02F'>Volume -</button>
+			<button class='group1' hex='0xE0E048B7'>Channel +</button>
+			<button class='group1' hex='0xE0E008F7'>Channel -</button>
+
+			<button class='number-full' hex='0xE0E08877'>0</button>
+			<button class='number' hex='0xE0E020DF'>1</button>
+			<button class='number' hex='0xE0E0A05F'>2</button>
+			<button class='number' hex='0xE0E0609F'>3</button>
+			<button class='number' hex='0xE0E010EF'>4</button>
+			<button class='number' hex='0xE0E0906F'>5</button>
+			<button class='number' hex='0xE0E050AF'>6</button>
+			<button class='number' hex='0xE0E030CF'>7</button>
+			<button class='number' hex='0xE0E0B04F'>8</button>
+			<button class='number-full' hex='0xE0E0708F'>9</button>
+
+</center>
+<script>
+	document.querySelectorAll('button').forEach((value, key) => {
+		value.onclick = (e) => {
+			fetch('/?code=' + value.getAttribute('hex'));
+		}
+	})
+</script>
+</body>
+</html>
