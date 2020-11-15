@@ -18,10 +18,16 @@ Devices not connecting with wifi, so controlling devices with infrared. You can 
 
 Enter HEX Code and press "Send" button on website
 
-Example: https://prnt.sc/vjft5l
+<div align="center">
+    <img src="https://i.ibb.co/5F4g1Hk/image.png">    
+</div>
+
 
 ## Samsung TV Page
 
 You can use on local.ip/samsung
 
-Example: https://prnt.sc/vjfuau
+<div align="center">
+    <img src="https://i.ibb.co/G3FZvYV/image.png">    
+</div>
+ 
